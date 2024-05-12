@@ -90,7 +90,7 @@ class StreamlitRouter:
         self.reset_request_state()
         st.session_state["request"] = (path, method)
         st.session_state["request_id"] = uuid4().hex
-        st.experimental_rerun()
+        st.rerun()
 
     def get_request_id(self):
         if st.session_state.get("request_id", None) is None:
