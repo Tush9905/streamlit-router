@@ -133,7 +133,7 @@ class StreamlitRouter:
 
     def serve(self):
         request = st.session_state.get("request")
-        query_string = st.get_query_params()
+        query_string = st._get_query_params()
         if request:
             self.handle(*request)
             path, method = request
